@@ -1,16 +1,63 @@
-# React + Vite
+Food Ordering App
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A simple food ordering application built with React and styled using Tailwind CSS. This project is part of the ALX Capstone Project timeline.
 
-Currently, two official plugins are available:
+🚀 Features (Week 1 Progress)
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+React app successfully bootstrapped.
 
-## React Compiler
+Tailwind CSS installed and working.
 
-The React Compiler is not enabled on this template. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+Basic components (Header, Hero, Footer) created and displayed.
 
-## Expanding the ESLint configuration
+Initial structure pushed to GitHub.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+📂 Project Structure
+food-ordering-app/
+│
+├── public/             # Static files
+├── src/                # React source files
+│   ├── components/     # UI components
+│   ├── App.jsx         # Main app
+│   └── index.css       # Tailwind base styles
+│
+├── package.json        # Dependencies & scripts
+└── README.md           # Project documentation
+
+🛠️ Installation & Setup
+
+Clone the repo:
+
+git clone https://github.com/Faith-254-UI/food-ordering-app.git
+cd food-ordering-app
+
+
+Install dependencies:
+
+npm install
+
+
+Start development server:
+
+npm run dev
+
+
+Open in browser:
+
+http://localhost:5173
+
+📌 Next Steps (Planned for Week 2)
+
+Add product cards with images and descriptions.
+
+Implement category filters (e.g., breakfast, lunch, dinner).
+
+Improve spacing & layout for better UI/UX.
+
+🤝 Contributing
+
+This is a learning project. Feedback, issues, and contributions are welcome!
+
+📜 License
+
+This project is licensed under the MIT License.
