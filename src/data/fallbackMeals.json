@@ -1,0 +1,17 @@
+[
+  {
+    "idMeal": "1001",
+    "strMeal": "Fallback Pizza",
+    "strMealThumb": "https://source.unsplash.com/featured/?pizza"
+  },
+  {
+    "idMeal": "1002",
+    "strMeal": "Fallback Burger",
+    "strMealThumb": "https://source.unsplash.com/featured/?burger"
+  },
+  {
+    "idMeal": "1003",
+    "strMeal": "Fallback Salad",
+    "strMealThumb": "https://source.unsplash.com/featured/?salad"
+  }
+]
