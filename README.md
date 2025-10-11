@@ -42,9 +42,8 @@ Start development server:
 npm run dev
 
 
-Open in browser:
+🚀 Live Demo: Coming soon (will be deployed in Week 2)
 
-http://localhost:5173
 
 📌 Next Steps (Planned for Week 2)
 
