@@ -4,8 +4,9 @@ import { useNavigate } from "react-router-dom";
 function Cart({ cartItems, removeFromCart, clearCart }) {
   const navigate = useNavigate();
 
+  // ✅ Ensure item.price is numeric
   const total = cartItems.reduce(
-    (sum, item) => sum + item.price * item.quantity,
+    (sum, item) => sum + parseFloat(item.price) * item.quantity,
     0
   );
 
@@ -25,14 +26,16 @@ function Cart({ cartItems, removeFromCart, clearCart }) {
               >
                 <div className="flex items-center gap-4">
                   <img
-                    src={item.image}
-                    alt={item.name}
+                    src={item.image || item.img || item.strMealThumb}
+                    alt={item.name || item.strMeal}
                     className="w-16 h-16 rounded-lg object-cover"
                   />
                   <div>
-                    <p className="font-semibold text-lg">{item.name}</p>
+                    <p className="font-semibold text-lg">
+                      {item.name || item.strMeal}
+                    </p>
                     <p className="text-gray-500">
-                      ${item.price} × {item.quantity}
+                      ${parseFloat(item.price).toFixed(2)} × {item.quantity}
                     </p>
                   </div>
                 </div>
@@ -57,7 +60,7 @@ function Cart({ cartItems, removeFromCart, clearCart }) {
               {clearCart && (
                 <button
                   onClick={clearCart}
-                  className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400"
+                  className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400 transition"
                 >
                   Empty Cart
                 </button>
