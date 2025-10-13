@@ -1,6 +1,7 @@
 import React, { useEffect, useState } from "react";
 import MenuItem from "../components/MenuItem"; // Optional: use if you split meal cards
 import fallbackData from "../data/fallbackMeals.json"; // Optional local fallback
+import { Link } from "react-router-dom";
 
 function Home({ onAddToCart }) {
   const [meals, setMeals] = useState([]);
@@ -39,9 +40,12 @@ function Home({ onAddToCart }) {
           <p className="text-gray-600 mb-6">
             Fresh meals delivered in minutes
           </p>
-          <button className="px-6 py-3 bg-gray-300 rounded-md font-medium hover:bg-gray-400">
-            Order Now
-          </button>
+         <Link to="/menu">
+  <button className="px-6 py-3 bg-gray-300 rounded-md font-medium hover:bg-gray-400">
+    Order Now
+  </button>
+</Link>
+
         </div>
         <img
           src="https://images.unsplash.com/photo-1551782450-a2132b4ba21d?auto=format&fit=crop&w=800&q=80"
