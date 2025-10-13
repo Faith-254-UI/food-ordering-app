@@ -1,21 +1,29 @@
 import { Link } from "react-router-dom";
 
-function Navbar({ cartCount = 0 }) {
+function Navbar() {
   return (
-    <nav className="flex justify-between items-center px-6 py-4 bg-gray-100 shadow-md sticky top-0 z-50">
-      <h1 className="font-bold text-lg text-yellow-600">🍔 FOODIES APP</h1>
-      <div className="space-x-6 flex items-center">
-        <Link to="/" className="hover:text-yellow-500">Home</Link>
-        <Link to="/menu" className="hover:text-yellow-500">Menu</Link>
-        <Link to="/contact" className="hover:text-yellow-500">Contact</Link>
-        <Link to="/cart" className="relative hover:text-yellow-500">
-          Cart
-          {cartCount > 0 && (
-            <span className="absolute -top-2 -right-4 bg-yellow-500 text-white text-xs font-semibold px-2 py-0.5 rounded-full">
-              {cartCount}
-            </span>
-          )}
-        </Link>
+    <nav className="w-full px-6 py-4 bg-gray-100 shadow">
+      <div className="flex flex-col md:flex-row justify-between items-center">
+        {/* Logo / Title */}
+        <h1 className="font-bold text-lg flex items-center gap-2 mb-4 md:mb-0">
+          🍔 FOODIES APP
+        </h1>
+
+        {/* Navigation Links */}
+        <div className="flex flex-wrap gap-4 md:gap-6 text-gray-700 font-medium">
+          <Link to="/" className="hover:text-yellow-500 transition">
+            Home
+          </Link>
+          <Link to="/menu" className="hover:text-yellow-500 transition">
+            Menu
+          </Link>
+          <Link to="/cart" className="hover:text-yellow-500 transition">
+            Cart
+          </Link>
+          <Link to="/contact" className="hover:text-yellow-500 transition">
+            Contact
+          </Link>
+        </div>
       </div>
     </nav>
   );
