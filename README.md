@@ -1,62 +1,60 @@
-Food Ordering App
+# 🍽️ Food Ordering App
 
-A simple food ordering application built with React and styled using Tailwind CSS. This project is part of the ALX Capstone Project timeline.
+A responsive React-based food ordering application that allows users to browse meals, add items to a cart, and proceed to checkout. Built as a Capstone Project during the Frontend Engineering program.
 
-🚀 Features (Week 1 Progress)
+## 🚀 Live Demo
+[View on Netlify](https://foodies-faith254.netlify.app/)
 
-React app successfully bootstrapped.
+## 📸 Demo Video
+Watch the full walkthrough on Loom: [Loom Demo](https://www.loom.com/share/your-video-link-here) <!-- Replace with your actual Loom link -->
 
-Tailwind CSS installed and working.
+## 📦 Features
 
-Basic components (Header, Hero, Footer) created and displayed.
+- 🏠 Homepage with hero section, categories, popular meals, and customer reviews
+- 🍔 Dynamic menu powered by the MealDB API with fallback JSON support
+- 🛒 Cart functionality: add/remove items, track quantity, calculate total
+- 📦 Checkout page with order summary placeholder
+- 📱 Responsive design using Tailwind CSS
+- ⚠️ Error handling for API failures
+- 🔁 Routing with React Router (`/`, `/cart`, `/checkout`, `/contact`)
 
-Initial structure pushed to GitHub.
+## 🧪 Technologies Used
 
-📂 Project Structure
-food-ordering-app/
-│
-├── public/             # Static files
-├── src/                # React source files
-│   ├── components/     # UI components
-│   ├── App.jsx         # Main app
-│   └── index.css       # Tailwind base styles
-│
-├── package.json        # Dependencies & scripts
-└── README.md           # Project documentation
+- React
+- React Router
+- Tailwind CSS
+- Vite
+- MealDB API
+- Git & GitHub
 
-🛠️ Installation & Setup
+## 📂 Folder Structure
+src/ ├── components/ │ ├── Navbar.jsx │ ├── Cart.jsx │ ├── MenuItem.jsx ├── pages/ │ ├── Home.jsx │ ├── Menu.jsx │ ├── Contact.jsx │ ├── Checkout.jsx ├── data/ │ └── fallbackMeals.json ├── App.jsx ├── main.jsx
 
-Clone the repo:
+## 🛠️ Setup Instructions
 
-git clone https://github.com/Faith-254-UI/food-ordering-app.git
-cd food-ordering-app
+1. Clone the repo:
+   ```bash
+   git clone https://github.com/Faith-254-UI/food-ordering-app.git
+   cd food-ordering-app
 
+2. Install dependencies:
+   npm install
 
-Install dependencies:
+3. Start the development server:
+   npm run dev
 
-npm install
+🧠 Reflection
+This project was built from scratch over 5 weeks. It demonstrates my ability to:
 
+Plan and structure a scalable React app
 
-Start development server:
+Handle real-world API data and fallback logic
 
-npm run dev
+Implement cart and checkout flows
 
+Polish UI for responsiveness and usability
 
-🚀 Live Demo: Coming soon (will be deployed in Week 2)
+Debug and deploy a full-stack frontend project
 
-
-📌 Next Steps (Planned for Week 2)
-
-Add product cards with images and descriptions.
-
-Implement category filters (e.g., breakfast, lunch, dinner).
-
-Improve spacing & layout for better UI/UX.
-
-🤝 Contributing
-
-This is a learning project. Feedback, issues, and contributions are welcome!
-
-📜 License
-
-This project is licensed under the MIT License.
+📬 Contact
+Created by Faith Niva Olesi GitHub: https://github.com/Faith-254-UI   
