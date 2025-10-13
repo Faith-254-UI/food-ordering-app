@@ -55,7 +55,7 @@ function Home({ onAddToCart }) {
         <h3 className="text-2xl font-bold">Explore Categories 🍴</h3>
         <p className="text-gray-500 mb-8">Choose from a variety of meals</p>
         <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
-          {["Pizza", "Burger", "Drinks", "Desserts"].map((category, i) => (
+        {["Seafood", "Beef", "Chicken", "Dessert", "Drinks"].map((category, i) => (
             <div key={i}>
               <img
                 src={`https://source.unsplash.com/featured/?${category}`}
