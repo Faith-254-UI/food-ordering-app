@@ -6,7 +6,7 @@ import Contact from "./pages/Contact";
 import Cart from "./components/Cart";
 import Checkout from "./pages/checkout";
 import Menu from "./pages/Menu";
-
+import Confirmation from "./pages/Confirmation"; 
 function App() {
   const [cartItems, setCartItems] = useState([]);
 
@@ -66,6 +66,7 @@ function App() {
           />
           <Route path="/checkout" element={<Checkout />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/confirmation" element={<Confirmation />} />
         </Routes>
       </div>
     </Router>

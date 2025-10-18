@@ -2,16 +2,16 @@
   {
     "idMeal": "1001",
     "strMeal": "Fallback Pizza",
-    "strMealThumb": "https://source.unsplash.com/featured/?pizza"
+    "strMealThumb": "https://cdn.pixabay.com/photo/2017/12/09/08/18/pizza-3007395_1280.jpg"
   },
   {
     "idMeal": "1002",
     "strMeal": "Fallback Burger",
-    "strMealThumb": "https://source.unsplash.com/featured/?burger"
+    "strMealThumb": "https://cdn.pixabay.com/photo/2016/03/05/19/02/hamburger-1238246_1280.jpg"
   },
   {
     "idMeal": "1003",
     "strMeal": "Fallback Salad",
-    "strMealThumb": "https://source.unsplash.com/featured/?salad"
+    "strMealThumb": "https://cdn.pixabay.com/photo/2016/03/05/19/02/salad-1238247_1280.jpg"
   }
 ]

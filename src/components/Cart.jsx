@@ -1,14 +1,17 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Cart({ cartItems, removeFromCart, clearCart }) {
+function Cart({ cartItems, removeFromCart, clearCart, addToCart }) {
   const navigate = useNavigate();
 
   // ✅ Ensure item.price is numeric
-  const total = cartItems.reduce(
+  const subtotal = cartItems.reduce(
     (sum, item) => sum + parseFloat(item.price) * item.quantity,
     0
   );
+  const taxRate = 0.08;
+  const tax = subtotal * taxRate;
+  const grandTotal = subtotal + tax;
 
   return (
     <section className="p-8 bg-gray-50 rounded-2xl mt-12 max-w-3xl mx-auto shadow-md">
@@ -28,6 +31,10 @@ function Cart({ cartItems, removeFromCart, clearCart }) {
                   <img
                     src={item.image || item.img || item.strMealThumb}
                     alt={item.name || item.strMeal}
+                    onError={(e) => {
+                      e.target.onerror = null;
+                      e.target.src = "/images/default-meal.jpg";
+                    }}
                     className="w-16 h-16 rounded-lg object-cover"
                   />
                   <div>
@@ -37,6 +44,24 @@ function Cart({ cartItems, removeFromCart, clearCart }) {
                     <p className="text-gray-500">
                       ${parseFloat(item.price).toFixed(2)} × {item.quantity}
                     </p>
+                    <div className="flex items-center gap-2 mt-2">
+                      <button
+                        onClick={() => removeFromCart(item.id)}
+                        className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                      >
+                        −
+                      </button>
+                      <span>{item.quantity}</span>
+                      <button
+                        onClick={() =>
+                          addToCart &&
+                          addToCart({ ...item, quantity: 1 })
+                        }
+                        className="px-2 bg-gray-200 rounded hover:bg-gray-300"
+                      >
+                        +
+                      </button>
+                    </div>
                   </div>
                 </div>
 
@@ -51,15 +76,27 @@ function Cart({ cartItems, removeFromCart, clearCart }) {
           </ul>
 
           <div className="mt-6 text-right border-t pt-4">
+            <h3 className="text-md text-gray-600">
+              Subtotal: ${subtotal.toFixed(2)}
+            </h3>
+            <h3 className="text-md text-gray-600">
+              Tax (8%): ${tax.toFixed(2)}
+            </h3>
             <h3 className="text-xl font-semibold">
-              Total:{" "}
-              <span className="text-yellow-500">${total.toFixed(2)}</span>
+              Grand Total:{" "}
+              <span className="text-yellow-500">${grandTotal.toFixed(2)}</span>
             </h3>
 
             <div className="flex justify-end gap-4 mt-4">
               {clearCart && (
                 <button
-                  onClick={clearCart}
+                  onClick={() => {
+                    if (
+                      window.confirm("Are you sure you want to empty the cart?")
+                    ) {
+                      clearCart();
+                    }
+                  }}
                   className="bg-gray-300 text-black px-4 py-2 rounded hover:bg-gray-400 transition"
                 >
                   Empty Cart
