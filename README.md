@@ -6,7 +6,7 @@ A responsive React-based food ordering application that allows users to browse m
 [View on Netlify](https://foodies-faith254.netlify.app/)
 
 ## 📸 Demo Video
-Watch the full walkthrough on Loom: [Loom Demo](https://www.loom.com/share/your-video-link-here) <!-- Replace with your actual Loom link -->
+Watch the full walkthrough on Loom: [Loom Demo](https://www.loom.com/share/7c7143ad9d2a47e7a73109493ab3be2b?sid=5992d184-6939-4b43-9fd0-383ef2d71bd0) <!-- Replace with your actual Loom link -->
 
 ## 📦 Features
 
