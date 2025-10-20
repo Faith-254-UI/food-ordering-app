@@ -1,7 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom";
 
-function Cart({ cartItems, removeFromCart, clearCart, addToCart }) {
+function Cart({ cartItems, removeFromCart, clearCart, addToCart, increaseQuantity }) {
   const navigate = useNavigate();
 
   // ✅ Ensure item.price is numeric
@@ -54,8 +54,7 @@ function Cart({ cartItems, removeFromCart, clearCart, addToCart }) {
                       <span>{item.quantity}</span>
                       <button
                         onClick={() =>
-                          addToCart &&
-                          addToCart({ ...item, quantity: 1 })
+                          increaseQuantity && increaseQuantity(item.id)
                         }
                         className="px-2 bg-gray-200 rounded hover:bg-gray-300"
                       >
